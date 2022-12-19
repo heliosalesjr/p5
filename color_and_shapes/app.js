@@ -65,7 +65,7 @@ class Shape {
       } else if (this.type == 'ellipse') {
         ellipse(0, 0, this.size, this.size);
       } else if (this.type == 'triangle') {
-        triangle(-this.size / 2, -this.size / 2, this.size / 2, this.size / 2, 0, -this.size / 2);
+        triangle(0, -this.size / 2, -this.size / 2, this.size / 2, this.size / 2, this.size / 2);
       }
       pop(); // restore previous transformation matrix
     }
