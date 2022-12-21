@@ -3,7 +3,7 @@ let startY = [];
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
-  frameRate(300); // Set the frame rate to 30 frames per second
+  frameRate(30); // Set the frame rate to 30 frames per second
 }
 
 function draw() {
