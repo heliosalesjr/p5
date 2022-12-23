@@ -22,7 +22,6 @@ function draw() {
   }
 }
 
-// Raindrop object
 class Raindrop {
   constructor() {
     this.pos = createVector(random(width), random(-100, -10)); // random start position
@@ -40,8 +39,12 @@ class Raindrop {
   }
 
   show() {
-    stroke(this.color); // set stroke color
+    let c = color(255, 0, 0); // red color
+    let y = map(this.pos.y, 0, height, 0, 1); // map y position to range 0-1
+    c = lerpColor(c, color(0, 0, 255), y); // interpolate between red and violet based on y position
+    stroke(c); // set stroke color
     strokeWeight(this.size); // set stroke weight
     line(this.pos.x, this.pos.y, this.pos.x, this.pos.y + this.size); // draw line to represent raindrop
   }
 }
+
