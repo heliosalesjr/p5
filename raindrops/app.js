@@ -47,4 +47,3 @@ class Raindrop {
     line(this.pos.x, this.pos.y, this.pos.x, this.pos.y + this.size); // draw line to represent raindrop
   }
 }
-
