@@ -86,3 +86,5 @@ function validPlacement(shape) {
   }
   return true;
 }
+
+//the shapes shouldn't touch each other but it's happening sometimes, maybe because of the random size, that needs to be investigated.
