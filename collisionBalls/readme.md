@@ -1,0 +1,7 @@
+#Click on the canvas to add a new ball!
+
+In the draw function, we loop through each ball in the balls array using a for loop. For each ball, we draw it on the canvas using the circle function with its x, y, and r properties. We also update its position by adding its velocity (vx and vy) to its x and y coordinates. If the ball reaches the left or right edge of the canvas (i.e. if ball1.x is less than ball1.r or greater than width - ball1.r), we reverse its horizontal velocity by multiplying it by -1 (ball1.vx = -ball1.vx). Similarly, if the ball reaches the top or bottom edge of the canvas, we reverse its vertical velocity by multiplying it by -1 (ball1.vy = -ball1.vy).
+
+Next, we loop through all the remaining balls in the balls array (those with an index greater than i) using another for loop. For each pair of balls, we calculate the distance between their centers using the Pythagorean theorem and check if it is less than the sum of their radii (ball1.r + ball2.r). If the balls are colliding, we calculate the angle between them, and convert their velocities into a coordinate system in which the angle is the x-axis. We then apply the 1D collision equations to compute their new velocities in this coordinate system. Finally, we convert their velocities back to the original coordinate system and update their positions using their new velocities.
+
+The mouseClicked function adds a new ball to the balls array with a random position (mouseX and mouseY), radius (r), and velocity (vx and vy).
